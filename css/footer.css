@@ -1,0 +1,49 @@
+/* <footer> */
+
+footer {
+    display: flex;
+    background-color: #000;
+    color: white;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+footer section.links a,
+footer section.team h5 {
+    margin: .5rem 0;
+    display: block;
+    color: white;
+}
+
+footer section.social {
+    display: flex;
+    flex-direction: column;
+}
+
+footer section.social a {
+    margin: .5rem 0;
+    font-size: 1rem;
+    display: inline;
+}
+
+footer section.social a.fab h5 {
+    display: inline;
+}
+
+footer section.social a.fa-instagram {
+    color: rgb(253, 29, 29);
+}
+
+footer section.social a.fa-facebook {
+    color: rgb(66, 103, 178)
+}
+
+footer section.social a.fa-twitter {
+    color: rgb(29, 161, 242)
+}
+
+@media screen and (min-width:60em) {
+    footer {
+        padding: 2em;
+    }
+}

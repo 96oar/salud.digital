@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/enfermedades.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <label class="logo">Salud Digital</label>
+            <input type="checkbox" id="check_search">
+            <label for="check_search" class="checksearch">
+            <i class="fas fa-search"></i>
+        </label>
+            <div class="container-search">
+                <datalist id="disease">
+                    <option value="Codvid-19">
+                    <option value="Dengue">
+                    <option value="Zika">
+                </datalist>
+                <input list="disease" type="text" id="inp_search">
+            </div>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lista_enfermedades.html">Enfermedades</a></li>
+                <li><a href="#">Vacunacion</a></li>
+                <li><a href="hospitales.html">Hospitales</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main_disease">
+        <section class="description_disease">
+            <h2 class="title">COVID-19</h2>
+            <article class="image_description">
+                <img class="image" src="img/corona.png" alt="Corona">
+                <p class="description">
+                    El virus que causa la COVID‑19 se transmite principalmente a través de las gotículas generadas cuando una persona infectada tose, estornuda o espira. Estas gotículas son demasiado pesadas para permanecer suspendidas en el aire y caen rápidamente sobre
+                    el suelo o las superficies.
+                </p>
+            </article>
+        </section>
+
+        <section class="test">
+            <h3 class="title_test">FORMULARIO DE DETECCION (TEST) DE CORONAVIRUS (COVID-19)</h3>
+            <article class="guide_form">
+                <div class="guide">
+                    <div class="text_guide">
+                        <p>
+                            Hola usuario! Si tiene sintomas de XXXX o has estado en contacto con una persona afectada deberias hacer un control y seguimiento diario de tus sintomas.
+                        </p>
+                        <p>
+                            Esta aplicacion te permitira hacer un seguimiento de la evolucion de los sintomas y te dara las indicaciones y consejos a seguir en cada caso. El uso de este servicio supone la aceptacion de los terminos y la politica de privacidad descritos en Ver las
+                            condiciones y politicas
+                        </p>
+                    </div>
+
+                    <h4 class="title_guide">SINTOMAS</h4>
+
+                    <div class="image_guide">
+                        <img src="img/24-fiebre-dolor-garganta.png" alt="Fiebre + dolor de garganta">
+                        <img src="img/25-fiebre-dificultad-respirar.png" alt="Fiebre + dificultad para respirar">
+                        <img src="img/23-fiebre-tos.png" alt="Fiebre + tos" class="image_cough">
+                    </div>
+                </div>
+
+
+                <form action="get" action="#" class="form">
+
+                    <div class="field_name_dni">
+                        <div class="name">
+                            <input type="text" id="name_surname" name="name_surname" placeholder="Ingrese nombre y apellido...">
+                        </div>
+
+                        <div class="dni">
+                            <input type="text" id="dni" name="dni" placeholder="Ingrese su DNI...">
+                        </div>
+                    </div>
+
+                    <div class="field_phone_cityO">
+                        <div class="phone">
+                            <input id="phone" type="tel" name="phone" placeholder="Ingrese su Telefono..." pattern="[0-9]{8,}" required>
+                        </div>
+
+                        <div class="cityO">
+                            <input type="text" id="hometown" name="hometown" placeholder="Ingrese su ciudad de origen...">
+                        </div>
+                    </div>
+
+
+                    <div class="field_sex">
+                        <p>Indique su sexo:</p>
+
+                        <input type="radio" id="male" name="sex" value="masculino" checked>
+                        <label for="male">M</label>
+                        <input type="radio" id="female" name="sex" value="femenino">
+                        <label for="female">F</label>
+
+                    </div>
+
+                    <div class="field_travel">
+                        <p>¿Ha viajado al exterior de la Republica Argentina?</p>
+                        <input type="radio" id="yes" name="travel" value="si" checked>
+                        <label for="yes">Si</label>
+                        <input type="radio" id="no" name="travel" value="no">
+                        <label for="no">No</label>
+                    </div>
+
+                    <div class="field_travel_country">
+                        <select name="countries_visited" id="countries_visited">
+                          <option disabled selected>Pais visitado:</option>
+                          <option value="china">China</option>
+                          <option value="italia">Italia</option>
+                          <option value="españa">España</option>
+                          <option value="estadosunidos">Estados Unidos</option>
+                        </select>
+                    </div>
+
+                    <div class="field_symptoms">
+                        <h5>Por favor, indica los sintomas que presentas:</h5>
+
+                        <p>¿Tuviste Fiebre mayor a 38 grados?</p>
+                        <input type="radio" id="yes1" name="fever" value="si" checked>
+                        <label for="yes1">Si</label>
+                        <input type="radio" id="no1" name="fever" value="no">
+                        <label for="no1">No</label>
+
+                        <p>¿Tuviste Dolor de cabeza?</p>
+                        <input type="radio" id="yes2" name="headache" value="si" checked>
+                        <label for="yes2">Si</label>
+                        <input type="radio" id="no2" name="headache" value="no">
+                        <label for="no2">No</label>
+
+                        <p>¿Tuviste una tos persistente?</p>
+                        <input type="radio" id="yes3" name="cough" value="si" checked>
+                        <label for="yes3">Si</label>
+                        <input type="radio" id="no3" name="cough" value="no">
+                        <label for="no3">No</label>
+
+                        <p>¿Tuviste Dolor de garganta?</p>
+                        <input type="radio" id="yes4" name="sore_throat" value="si" checked>
+                        <label for="yes4">Si</label>
+                        <input type="radio" id="no4" name="sore_throat" value="no">
+                        <label for="no4">No</label>
+
+                        <p>¿Tuviste Dificultad para respirar?</p>
+                        <input type="radio" id="yes5" name="difficulty_breathing" value="si" checked>
+                        <label for="yes5">Si</label>
+                        <input type="radio" id="no5" name="difficulty_breathing" value="no">
+                        <label for="no5">No</label>
+                    </div>
+
+                    <div class="field_addres_city">
+
+                        <div class="addres">
+                            <input type="text" id="address" name="address" placeholder="Ingrese su direccion">
+                        </div>
+
+                        <div class="city">
+                            <input type="text" id="city" name="city" placeholder="Ingrese su ciudad...">
+                        </div>
+
+                    </div>
+                    <input type="submit" value="Enviar" class="button_send">
+                </form>
+
+            </article>
+        </section>
+
+        <section class="precautions">
+            <h2 class="title_precaution">Precauciones</h2>
+            <article class="images_precaution">
+                <div class="sector_upper">
+                    <img src="img/14-lavarse-manos.png" alt="" class="image_1">
+                    <img src="img/16-tocar-nariz.png" alt="" class="image_2">
+                    <img src="img/15-estornudar.png" alt="" class="image_3">
+                    <img src="img/17-ventilar.png" alt="" class="image_4">
+                </div>
+                <div class="sector_bottom">
+                    <img src="img/18-limpiar-objetos.png" alt="" class="image_5">
+                    <img src="img/20-reducir-contacto.png" alt="" class="image_6">
+                    <img src="img/19-permanecer-domicilio.png" alt="" class="image_7">
+                    <img src="img/21-no-compartir-mate.png" alt="" class="image_8">
+                </div>
+            </article>
+        </section>
+
+        <section class="hospital_map">
+            <h4 class="title_hospital_map">Hospital mas cercano especializado en COVID19</h4>
+            <article class="content_hospital_map">
+                <div class="hospital">
+                    <h5>Hospital Posadas</h5>
+                    <p>Tel: 011 4469-9300</p>
+                    <p>Direccion: Avenida Presidente Arturo U. Illia s/n y Marconi Morón 386</p>
+                    <p>Ciudad: Buenos Aires</p>
+                    <img src="img/Hospital_Posadas.jpg" alt="">
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.9678719346634!2d-58.577513284769594!3d-34.630252180452665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb80b7396b9af%3A0xef2dc611cc3efabb!2sPosadas!5e0!3m2!1ses-419!2sar!4v1590544544474!5m2!1ses-419!2sar"
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <section class="team">
+
+            <h4>Integrantes:</h4>
+            <h5>Rao, Adrian</h5>
+            <h5>
+                Rivasseau, Nicolas
+            </h5>
+        </section>
+        <section class="links">
+            <h4>Enlaces externos:</h4>
+            <a href="index.html">Home</a>
+            <a href="lista_enfermedades.html">Enfermedades</a>
+            <a href="#">Vacunacion</a>
+            <a href="hospitales.html">Hospitales</a>
+            <a href="contacto.html">Contacto</a>
+        </section>
+        <section class="social">
+            <h4>Seguinos en:</h4>
+            <a href="#" class="fab fa-instagram">
+                <h5>Instagram</h5>
+            </a>
+            <a href="#" class="fab fa-twitter">
+                <h5>Twitter</h5>
+            </a>
+            <a href="#" class="fab fa-facebook">
+                <h5>Facebook</h5>
+            </a>
+        </section>
+    </footer>
+</body>
+
+</html>

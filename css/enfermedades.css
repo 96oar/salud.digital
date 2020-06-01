@@ -1,0 +1,514 @@
+@import 'header.css';
+@import 'footer.css';
+body{
+  font-size: 70%;
+}
+.main_disease{
+        margin: .5rem 0;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: 0.1fr .5fr .5fr 0.01fr;
+        gap: 1em;
+        grid-template-areas: "disease" 
+                              "test" 
+                              "precautions" 
+                              "hospital_map";
+        grid-area: main;
+        margin: 0 auto;
+        box-shadow: 10px 3px 15px -2px rgba(0, 0, 0, 0.44);
+      }
+      
+  
+      /*GRILLA ENFERMEDAD */
+      
+      .description_disease{
+          grid-area: disease;
+          display: grid;
+          row-gap: 1em;
+          grid-template-rows: .01fr 1fr;
+          grid-template-areas: "title" "image_description";
+      }
+      .title{
+          grid-area: title;
+          text-align: center;
+          text-decoration: underline;
+          padding: 1em;
+      }
+  
+      .image_description{
+          grid-area: image_description;
+          display: grid;
+          row-gap: 2em;
+          grid-template-rows: 1fr .7fr;
+          grid-template-areas:"image" "description";
+      }
+      .image{
+          grid-area: image;
+          border-radius:3em ;
+          width: 20em;
+          height: 15em;
+          margin: auto;
+      }
+      .description{
+          grid-area: description;
+          padding: 1em;
+      }
+  
+  
+  
+  
+  
+  
+  
+      /*GRILLA TEST*/
+      
+      .test{
+          grid-area: test;
+          display: grid;
+          grid-template-rows: .1fr 3fr;
+          grid-template-areas: "title_test" "guide_form";
+      }
+      .title_test{
+          grid-area: title_test;
+          text-align: center;
+          text-decoration: underline;
+          padding: 2em 0 2em 0;
+      }
+      .guide_form{
+          grid-area:guide_form;
+          display: grid;
+          row-gap: 3rem;
+          grid-template-rows: 1fr 1.5fr;
+          grid-template-areas: "guide" "form";
+          padding: 2em 2em 1em 1em;
+      }
+      .guide{
+          grid-area: guide;
+          display: grid;
+          grid-template-rows: 0.1fr 0.1fr 1fr;
+          grid-template-areas: "text_guide" "title_guide" "image_guide";
+      }
+      .text_guide{
+        grid-area: text_guide;
+      }
+      .text_guide p{
+        padding: 1em 1em 1em 1em;
+      }
+      .title_guide{
+        grid-area: title_guide;
+        text-align: center;
+        text-decoration: underline;
+        padding: 1em 0 3em 0;
+      }
+      .image_guide{
+        grid-area: image_guide;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .image_guide img{
+          width: 17em;
+          padding: 1rem 0;
+      }
+  
+      .form{
+          grid-area: form;
+          display: grid;
+          row-gap: .5rem;
+          grid-template-rows: .3fr .3fr .1fr .25fr .3fr .5fr .3fr .1fr;
+          grid-template-areas: "field_name_dni" 
+                              "field_phone_cityO" 
+                              "field_sex" 
+                              "field_travel" 
+                              "field_travel_country" 
+                              "field_symptoms" 
+                              "field_addres_city"
+                              "button_send";
+      }
+      .field_name_dni{
+         grid-area: field_name_dni;
+         display: grid;
+         row-gap: .5rem;
+         grid-template-rows: 1fr 1fr;
+         grid-template-areas: "name" "dni";
+      }
+      .name{
+         grid-area: name;
+  
+      }
+      .dni{
+         grid-area: dni;
+       
+      }
+  
+  
+      .field_phone_cityO{
+         grid-area: field_phone_cityO;
+         row-gap: .5rem;
+         display: grid;
+         grid-template-rows: 1fr 1fr;
+         grid-template-areas: "phone" "cityO";
+      }
+      .phone{
+         grid-area: phone;
+      }
+      .cityO{
+         grid-area: cityO;
+      }
+  
+  
+      .field_sex{
+          grid-area: field_sex;
+      }
+      .field_sex p{
+        display: inline-block;
+        padding: 0 2em 0 0;
+      }
+      
+      .field_travel{
+          grid-area: field_travel;
+      }
+      .field_travel p{
+        padding: 0 0 1em 0;
+      }
+  
+  
+      .field_travel_country{
+         grid-area:field_travel_country ;
+      }
+  
+  
+      .field_symptoms{
+        grid-area: field_symptoms;
+      }
+      .field_symptoms h5{
+        padding: 0 0 1em 0;
+      }
+      .field_symptoms p{
+        padding: .5em 0 .5em 0;
+      }
+  
+  
+      .field_addres_city{
+        grid-area: field_addres_city;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "addres" "city"
+      }
+      .addres{
+        grid-area: addres;
+        padding: 1.5em 0 0 0;
+      }
+      .city{
+          grid-area: city;
+          padding: 1.5em 0 0 0;
+      }
+      .button_send{
+        grid-area: button_send;
+        width: 100%;
+      }
+  
+      .form input[type=text],
+      .form input[type=tel],
+      .form input[type=email],
+      .form input[type=radio],
+      .form select{
+          width: 100%;
+          box-sizing: border-box;
+          outline: none;
+          border: none;
+          background-color: rgba(0, 0, 0, 0);
+          border: 3px solid #ccc;
+          transition: 0.5s linear;
+          padding:  7px 20px;
+      }
+      .form input[type=text]:focus,
+      .form input[type=tel]:focus,
+      .form input[type=email]:focus,
+      .form select:focus{
+          border: 3px solid #555;
+          background-color: #ffffff;
+      }
+     .form input[type="submit"] {
+          font-weight: bold;
+          border: none;
+          background-color: #585858;
+          color: #f5f5f5;
+          padding: 0.4375em 0;
+          cursor: pointer;
+      }
+  
+      .form input[type="radio"]{
+        display: none;
+      }
+      .form label{
+        color: #555;
+        padding: 5px 15px 5px 51px;
+        display: inline-block;
+        position: relative;
+        font-size: 1em;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+      .form label:hover{
+        background-color:rgba(85, 85, 85, 0.123);
+      }
+      .form label:before{
+        content: "";
+        width: 17px;
+        height: 17px;
+        display: inline-block;
+        background: none;
+        border: 3px solid #555;
+        border-radius: 50%;
+        top:0;
+        position: absolute;
+        left:17px
+      }
+      .form input[type=radio]:checked + label{
+        padding: 5px 15px;
+        background-color: #555;
+        border-radius: 2px;
+        color: #fff;
+      }
+      .form input[type=radio]:checked + label:before{
+        display: none;
+      }
+  
+      
+      
+  
+     
+  
+  
+      /*GRILLA IMAGENES*/
+      
+      .precautions{
+          grid-area: precautions;
+          display: grid;
+          grid-template-rows: .1fr 1fr;
+          grid-template-areas: "title_precaution" "images_precaution";
+      }
+      .title_precaution{
+          grid-area: title_precaution;
+          text-align: center;
+          text-decoration: underline;
+          padding: 1em;
+      }
+      .images_precaution{
+          grid-area: images_precaution;
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-areas: "sector_upper" "sector_bottom";
+          padding: 3em;
+      }
+  
+      .sector_upper{
+        grid-area: sector_upper;
+        display: grid;
+        row-gap: .5rem;
+        grid-template-rows:1fr 1fr;
+        grid-template-areas: "image_1 image_2" "image_3 image_4" ;
+        padding: 0 0 2em 0;
+      }
+      .sector_bottom{
+        grid-area: sector_bottom;
+        display: grid;
+        row-gap: .5rem;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "image_5 image_6" "image_7 image_8";
+        padding: 2em 0 0 0;
+      }
+  
+      .images_precaution img{
+          width: 100%;
+          padding: 1em;
+          margin: auto;
+      }
+      .image_1{
+        grid-area: image_1;
+      }
+      .image_2{
+        grid-area: image_2;
+      }
+      .image_3{
+        grid-area: image_3;
+      }
+      .image_4{
+        grid-area: image_4;
+      }
+      .image_5{
+        grid-area: image_5;
+      }
+      .image_6{
+        grid-area: image_6;
+      }
+      .image_7{
+        grid-area: image_7;
+      }
+      .image_8{
+        grid-area: image_8;
+      }
+  
+  
+      /*GRILLA HOSPITAL MAPA*/
+      
+      .hospital_map{
+        grid-area: hospital_map;
+        grid-row: 2em;
+        display: grid;
+        grid-template-rows: .1fr 1fr;
+        grid-template-areas: "title_hospital_map" "content_hospital_map";
+      }
+      .title_hospital_map{
+        grid-area:title_hospital_map;
+        padding: 1em;
+        text-align: center;
+      }
+      
+      .content_hospital_map{
+        grid-area: content_hospital_map;
+        display: grid;
+        row-gap: 3em;
+        grid-template-rows: 1fr .5fr;
+        grid-template-areas: "hospital" "map";
+      }
+      .hospital{
+        grid-area: hospital;
+      }
+      .hospital h5{
+        padding: 1em;
+      }
+      .hospital p{
+        padding: .1em 0 .1em 1em;
+      }
+  
+      .hospital img{
+        width: 100%;
+        padding: 1em;
+      }
+  
+      .map{
+        grid-area: map;
+        box-sizing: border-box;
+      }
+      .map iframe{
+        width: 100%;
+        height: 20em;
+        padding: 1em;
+      }
+
+   @media screen and (min-width: 60em){
+      body {
+          font-size: 100%;
+          background-color: #d6dbd7;
+      }
+      main{
+          padding: 0;
+          width: 90%;
+          margin: 0 auto;
+          background-color: #ffffff;
+          box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
+      }
+      .image_description{
+        grid-template-rows: none;
+        grid-template-columns: .7fr 1fr;
+        grid-template-areas:"image description";
+    }
+    .description{
+      margin: auto;
+    }
+    .guide_form{
+      grid-template-rows: none;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "guide form";
+      padding: 2em 2em 1em 1em;
+  }
+  .form{
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 5fr 1fr .5fr;
+    grid-template-areas: "field_name_dni" 
+                        "field_phone_cityO" 
+                        "field_sex" 
+                        "field_travel" 
+                        "field_travel_country" 
+                        "field_symptoms" 
+                        "field_addres_city"
+                        "button_send";
+}
+  .field_name_dni{
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name dni";
+ }
+ .field_phone_cityO{
+  grid-template-rows: none;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "phone cityO";
+}
+.field_addres_city{
+  grid-template-rows: none;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "addres city"
+}
+.field_travel p{
+  display: inline;
+  padding: 0 1em;
+}
+.form input[type=text],
+      .form input[type=tel],
+      .form input[type=email],
+      .form input[type=radio],
+      .form select{
+          width: 95%;
+      }
+      .form label:before{
+        top: 3px;
+      }
+      .sector_upper{
+        grid-area: sector_upper;
+        display: grid;
+        row-gap: .5rem;
+        grid-template-rows: none;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-areas: "image_1 image_2 image_3 image_4" ;
+        padding: 0 0 2em 0;
+      }
+      .sector_bottom{
+        grid-area: sector_bottom;
+        display: grid;
+        row-gap: .5rem;
+        grid-template-rows: none;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-areas: "image_5 image_6 image_7 image_8";
+        padding: 2em 0 0 0;
+      }
+      .images_precaution img{
+        width: 70%;
+        padding: 1em;
+        margin: auto;
+    }
+    .content_hospital_map{
+      grid-template-rows: none;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "hospital map";
+    }
+    .hospital img{
+      width: 35%;
+      padding:1em ;
+    }
+
+    .map iframe{
+      width: 100%;
+      height: 30em;
+      padding: 1em;
+      margin: auto;
+    }
+    .field_travel p{
+      padding: 0;
+    }
+   
+   }
+
+   
+  

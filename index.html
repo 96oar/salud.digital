@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <label class="logo">Salud Digital</label>
+            <input type="checkbox" id="check_search">
+            <label for="check_search" class="checksearch">
+                <i class="fas fa-search"></i>
+            </label>
+            <div class="container-search">
+                <datalist id="disease">
+                    <option value="Codvid-19">
+                    <option value="Dengue">
+                    <option value="Zika">
+                </datalist>
+                <input list="disease" type="text" id="inp_search">
+            </div>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="lista_enfermedades.html">Enfermedades</a></li>
+                <li><a href="#">Vacunacion</a></li>
+                <li><a href="hospitales.html">Hospitales</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="slider">
+            <ul>
+                <li>
+                    <img src="img/slider-1.jpg" alt="Slider-1" />
+                </li>
+                <li><img src="img/slider-2.jpg" alt="" /></li>
+                <li><img src="img/slider-3.jpg" alt="" /></li>
+                <li><img src="img/slider-4.jpg" alt="" /></li>
+            </ul>
+        </section>
+        <section class="articles">
+            <article>
+                <img src="img/enfermedades.jpg" alt="" />
+                <div class="description">
+                    <h1>Enfermedades</h1>
+                    <p>
+                        La salud y la enfermedad son parte integral de la vida, del proceso biológico y de las interacciones medio ambientales y sociales.
+                    </p>
+                    <a href="lista_enfermedades.html">Seguir leyendo</a>
+                </div>
+            </article>
+            <article>
+                <img src="img/googlemaps.jpg" alt="" />
+                <div class="description">
+                    <h1>Hospitales</h1>
+                    <p>
+                        Si tienes fiebre, tos y dificultad para respirar, busca atención médica lo antes posible. Busca tu hospital mas cercano posible.
+                    </p>
+                    <a href="hospitales.html">Seguir leyendo</a>
+                </div>
+            </article>
+            <article>
+                <img src="img/contact-us.png" alt="" />
+                <div class="description">
+                    <h1>Contacto</h1>
+                    <p>
+                        ¿Tenes alguna sugerencia o duda sobre nuestra empresa ? Danos tu opinion que nos interesa para seguir creciendo.
+                    </p>
+                    <a href="contacto.html">Seguir leyendo</a>
+                </div>
+            </article>
+        </section>
+        <section class="alert">
+            <div class="description">
+                <p> Si presentas sintomas de COVID-19 </p>
+                <h1>LLAMA A</h1>
+            </div>
+            <div class="number">
+                <a href="tel:148"><i class="fas fa-phone"></i> 148</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="team">
+            <h4>Integrantes:</h4>
+            <h5>Rao, Adrian</h5>
+            <h5>
+                Rivasseau, Nicolas
+            </h5>
+        </section>
+        <section class="links">
+            <h4>Enlaces externos:</h4>
+            <a href="#">Home</a>
+            <a href="lista_enfermedades.html">Enfermedades</a>
+            <a href="#">Vacunacion</a>
+            <a href="hospitales.html">Hospitales</a>
+            <a href="contacto.html">Contacto</a>
+        </section>
+        <section class="social">
+            <h4>Seguinos en:</h4>
+            <a href="#" class="fab fa-instagram">
+                <h5>Instagram</h5>
+            </a>
+            <a href="#" class="fab fa-twitter">
+                <h5>Twitter</h5>
+            </a>
+            <a href="#" class="fab fa-facebook">
+                <h5>Facebook</h5>
+            </a>
+        </section>
+    </footer>
+</body>
+
+</html>

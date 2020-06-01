@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/lista_enfermedades.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <label class="logo">Salud Digital</label>
+            <input type="checkbox" id="check_search">
+            <label for="check_search" class="checksearch">
+                <i class="fas fa-search"></i>
+            </label>
+            <div class="container-search">
+                <datalist id="disease">
+                    <option value="Codvid-19">
+                    <option value="Dengue">
+                    <option value="Zika">
+                </datalist>
+                <input list="disease" type="text" id="inp_search">
+            </div>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Enfermedades</a></li>
+                <li><a href="#">Vacunacion</a></li>
+                <li><a href="hospitales.html">Hospitales</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main_disease_list">
+        <section class="header_search">
+            <h2 class="title_search">Enfermedades</h2>
+            <article class="disease_search">
+                <datalist id="disease">
+                    <option value="Codvid-19">
+                    <option value="Dengue">
+                    <option value="Zika">
+                </datalist>
+                <input class="inp_search" type="text" list="disease" placeholder="Filtre por enfermedad..." />
+                <a class="fas fa-search" href="#"></a>
+            </article>
+        </section>
+
+        <section class="disease">
+
+            <img class="image_one" src="img/corona.png" alt="Codvid-19">
+            <img class="image_two" src="img/Dengue.png" alt="Dengue">
+            <img class="image_three" src="img/zika.png" alt="Zika">
+
+
+            <div class="description_one">
+                <h3>COVID-19</h3>
+                <P>
+                    Los síntomas aparecen entre dos y catorce días, con un promedio de cinco días, después de la exposición al virus.21​22​23​24​ Existe evidencia limitada que sugiere que el virus podría transmitirse uno o dos días antes de que se tengan síntomas, ya que
+                    la viremia alcanza un pico al final del período de incubación.25​26​ El contagio se puede prevenir con el lavado de manos frecuente, o en su defecto la desinfección de las mismas con alcohol en gel, cubriendo la boca al toser o estornudar,
+                    ya sea con la sangradura (parte hundida del brazo opuesta al codo) o con un pañuelo y evitando el contacto cercano con otras personas,19​ entre otras medidas profilácticas, como el uso de mascarillas. La OMS desaconsejaba en marzo
+                    la utilización de máscara quirúrgica por la población sana, 27​28​ en abril la OMS consideró que era una medida aceptable en algunos países. 29​ No obstante, ciertos expertos recomiendan el uso de máscaras quirúrgicas basados en estudios
+                    sobre la Influenza H1N1, donde muestran que podrían ayudar a reducir la exposición al virus.30​ Los CDC recomiendan el uso de mascarillas de tela, no médicas.31​
+                </P>
+                <a class="fas fa-arrow-alt-circle-right" href="enfermedad.html"></a>
+            </div>
+            <div class="description_two">
+                <h3>DENGUE</h3>
+                <P>
+                    Es una infección muy extendida que se presenta en todas las regiones de clima tropical del planeta. En los últimos años la transmisión ha aumentado de manera predominante en zonas urbanas y se ha convertido en un importante problema de salud pública.
+                    En la actualidad, más de la mitad de la población mundial está en riesgo de contraer la enfermedad. La prevención y el control del dengue dependen exclusivamente de las medidas eficaces de lucha contra el vector transmisor, el mosquito.2​
+                    El número de casos de dengue ha aumentado dramáticamente desde la década de 1960, con entre 50 y 528 millones de personas infectadas anualmente. Las primeras descripciones datan de 1779 y su causa viral y la transmisión fueron entendidas
+                    a principios del siglo XX. El dengue se ha convertido en un problema mundial desde la Segunda Guerra Mundial y es endémica en más de 110 países. Aparte de la eliminación de los mosquitos, se está trabajando en una vacuna contra el
+                    dengue, así como la medicación dirigida directamente al virus.
+                </P>
+                <a class="fas fa-arrow-alt-circle-right" href="enfermedad.html"></a>
+            </div>
+            <div class="description_three">
+                <h3>ZIKA</h3>
+                <P>
+                    En 2014 el virus se propagó al este a través del océano Pacífico hacia la Polinesia Francesa, y después hacia la isla de Pascua para llegar en 2015 y 2016 a América Central, el Caribe y América del Sur, donde el brote epidémico del Zika ha alcanzado niveles
+                    pandémicos.4​5​ La enfermedad produce síntomas similares a formas leves de dengue,6​ su tratamiento consiste básicamente en el reposo,7​ y en la actualidad no existen medicamentos o vacunas para su prevención.7​ La fiebre del Zika
+                    está relacionada con otras enfermedades similares, como la fiebre amarilla y la fiebre del Nilo Occidental, las cuales también son producidas por otros Flavivirus transmitidos por mosquitos.6​ Hay vínculo entre la fiebre del Zika y
+                    la microcefalia en recién nacidos de madres infectadas como sucedió en el año 2016 en Brasil.8​9​
+                </P>
+                <a class="fas fa-arrow-alt-circle-right" href="enfermedad.html"></a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <section class="team">
+
+            <h4>Integrantes:</h4>
+            <h5>Rao, Adrian</h5>
+            <h5>
+                Rivasseau, Nicolas
+            </h5>
+        </section>
+        <section class="links">
+            <h4>Enlaces externos:</h4>
+            <a href="index.html">Home</a>
+            <a href="#">Enfermedades</a>
+            <a href="#">Vacunacion</a>
+            <a href="hospitales.html">Hospitales</a>
+            <a href="contacto.html">Contacto</a>
+        </section>
+        <section class="social">
+            <h4>Seguinos en:</h4>
+            <a href="#" class="fab fa-instagram">
+                <h5>Instagram</h5>
+            </a>
+            <a href="#" class="fab fa-twitter">
+                <h5>Twitter</h5>
+            </a>
+            <a href="#" class="fab fa-facebook">
+                <h5>Facebook</h5>
+            </a>
+        </section>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/contacto.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <label class="logo">Salud Digital</label>
+            <input type="checkbox" id="check_search">
+            <label for="check_search" class="checksearch">
+                <i class="fas fa-search"></i>
+            </label>
+            <div class="container-search">
+                <datalist id="disease">
+                    <option value="Codvid-19">
+                    <option value="Dengue">
+                    <option value="Zika">
+                </datalist>
+                <input list="disease" type="text" id="inp_search">
+            </div>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lista_enfermedades.html">Enfermedades</a></li>
+                <li><a href="#">Vacunacion</a></li>
+                <li><a href="hospitales.html">Hospitales</a></li>
+                <li><a href="#" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact_us">
+            <section class="contact">
+                <h1>CONTACTO</h1>
+                <form action="">
+                    <input type="text" name="name" id="name" placeholder="Nombre">
+                    <input type="text" name="surname" id="surname" placeholder="Apellido">
+                    <input type="email" name="email" id="email" placeholder="email">
+                    <input type="tel" name="telephone" id="telephone" placeholder="Telefono">
+                    <textarea name="consult" id="consult" cols="30" rows="10" placeholder="Comentario..."></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+            </section>
+            <section class="data_contact">
+                <h1>DATOS DE CONTACTO</h1>
+                <ol>
+                    <li>
+                        <h6>Direccion:
+                            </br>
+                            Av. Rivadavia 15000, 1706 Haedo, Buenos Aires</h6>
+                    </li>
+                    <li>
+                        <h6>Telefonos:
+                            </br>
+                            4444-4444
+                        </h6>
+                    </li>
+                    <li>
+                        <h6>Celular:
+                            </br>
+                            (011) 1144444444</h6>
+                    </li>
+                    <li>
+                        <h6>Email:
+                            </br>
+                            <a href="mailto:hospitaleinterzonal@gba.com.ar">hospitaleinterzonal@gba.com.ar</a>
+                        </h6>
+                    </li>
+                    <li>
+                        <h6>Web:
+                            </br>
+                            <a href="index.html">interzonalhospital@gba.com.ar</a>
+                        </h6>
+                    </li>
+                </ol>
+            </section>
+        </section>
+        <section class="ubication">
+            <h1>UBICACION</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62453.11055247457!2d-58.57574420798752!3d-34.64744664858733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5cc20a3162a10da4!2sHospital%20Interzonal%20General%20de%20Agudos%20&#39;&#39;Profesor%20Dr.%20Luis%20G%C3%BCemes&#39;&#39;!5e0!3m2!1ses!2sar!4v1590453550141!5m2!1ses!2sar"
+                width="100%" height="490" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <section class="team">
+
+            <h4>Integrantes:</h4>
+            <h5>Rao, Adrian</h5>
+            <h5>
+                Rivasseau, Nicolas
+            </h5>
+        </section>
+        <section class="links">
+            <h4>Enlaces externos:</h4>
+            <a href="index.html">Home</a>
+            <a href="lista_enfermedades.html">Enfermedades</a>
+            <a href="#">Vacunacion</a>
+            <a href="hospitales.html">Hospitales</a>
+            <a href="#">Contacto</a>
+        </section>
+        <section class="social">
+            <h4>Seguinos en:</h4>
+            <a href="#" class="fab fa-instagram">
+                <h5>Instagram</h5>
+            </a>
+            <a href="#" class="fab fa-twitter">
+                <h5>Twitter</h5>
+            </a>
+            <a href="#" class="fab fa-facebook">
+                <h5>Facebook</h5>
+            </a>
+        </section>
+    </footer>
+</body>
+
+</html>

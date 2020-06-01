@@ -1,0 +1,167 @@
+@import 'header.css';
+@import 'footer.css';
+main {
+    margin: .5rem 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: change 20s infinite;
+    animation-direction: alternate;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+}
+
+main section {
+    margin: 1rem;
+}
+
+main section.articles article img {
+    width: 100%;
+}
+
+section.articles article .description {
+    padding: .7rem;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    width: 100%;
+}
+
+section.articles article .description h1 {
+    margin: .5rem 0;
+}
+
+section.articles article {
+    position: relative;
+    box-sizing: border-box;
+    margin: .5rem 0;
+}
+
+section.articles article .description a {
+    color: white;
+    padding: .5rem;
+    float: right;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+section.articles article .description i {
+    color: white;
+}
+
+main section.alert {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+}
+
+main section.alert a {
+    font-style: none;
+    color: #ffffff;
+    font-size: 6em;
+    transition: .5s;
+}
+
+main section.alert h1 {
+    font-style: none;
+    color: #ffffff;
+    font-size: 4em;
+}
+
+main section.alert a:hover {
+    font-style: none;
+    color: #fd0202be;
+}
+
+@keyframes change {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -300%;
+    }
+}
+
+@media screen and (min-width:47em) {
+    body {
+        font-size: 90%;
+    }
+}
+
+@media screen and (min-width:80em) {
+    body {
+        font-size: 100%;
+        background-color: #d6dbd7;
+    }
+    main {
+        padding: 0;
+        width: 90%;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+    .slider {
+        width: 100%;
+        height: 50rem;
+    }
+    section.articles {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section.articles article {
+        width: 30%;
+        margin: 0 .5rem;
+    }
+    section.articles article img {
+        width: 100%;
+        height: 23.125rem;
+    }
+    section.alert {
+        display: flex;
+        justify-content: center;
+    }
+    section.alert .description,
+    section.alert .number {
+        margin: auto;
+    }
+}
