@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
+    <script src="/js/enfermedad.js" defer></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/enfermedades.css" />
+    <link rel="stylesheet" href="css/enfermedad.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
 </head>
 
@@ -76,7 +77,7 @@
                 </div>
 
 
-                <form action="get" action="#" class="form">
+                <form action="#"  class="form" id="formSubmit">
 
                     <div class="field_name_dni">
                         <div class="name">
@@ -90,7 +91,7 @@
 
                     <div class="field_phone_cityO">
                         <div class="phone">
-                            <input id="phone" type="tel" name="phone" placeholder="Ingrese su Telefono..." pattern="[0-9]{8,}" required>
+                            <input id="phone" type="text" name="phone" placeholder="Ingrese su Telefono...">
                         </div>
 
                         <div class="cityO">
@@ -111,13 +112,14 @@
 
                     <div class="field_travel">
                         <p>¿Ha viajado al exterior de la Republica Argentina?</p>
-                        <input type="radio" id="yes" name="travel" value="si" checked>
+                        <input type="radio" id="yes" name="travel" value="si" checked >
                         <label for="yes">Si</label>
                         <input type="radio" id="no" name="travel" value="no">
                         <label for="no">No</label>
                     </div>
 
-                    <div class="field_travel_country">
+
+                    <div class="field_travel_country" id="field_travel_country_div">
                         <select name="countries_visited" id="countries_visited">
                           <option disabled selected>Pais visitado:</option>
                           <option value="china">China</option>
@@ -161,10 +163,10 @@
                         <label for="no5">No</label>
                     </div>
 
-                    <div class="field_addres_city">
+                    <div class="field_addres_city" id="field_addres_city_div">
 
                         <div class="addres">
-                            <input type="text" id="address" name="address" placeholder="Ingrese su direccion">
+                            <input type="text" id="address" name="address" placeholder="Ingrese su direccion...">
                         </div>
 
                         <div class="city">
@@ -172,8 +174,10 @@
                         </div>
 
                     </div>
-                    <input type="submit" value="Enviar" class="button_send">
+                    <input id="send" type="submit" value="Enviar" class="button_send">
                 </form>
+                <div id="message">
+                </div>
 
             </article>
         </section>
