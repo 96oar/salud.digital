@@ -13,11 +13,12 @@ setEvent = function () {
             if(validate()){
                 sumSymptoms();
                 setTimeout(() => {
-                   return validate();
+                    return true
                 }, 900);
+                
             }else{
-                document.getElementById("message_alert").style.backgroundColor= "#5e0000";
-                return validate();
+                
+                return false
             }
             
             
@@ -90,6 +91,7 @@ validate = function () {
     const message_alert = document.getElementById("message_alert")
     const message = 'Formato invalido en el campo'
     const regexPhone = /^[0-9]{4}\-[0-9]{4}$/
+    const regexDni = /^[0-9]{8}$/
     message_alert.innerHTML = ''
 
     if (name_surname.value == "") {
@@ -97,6 +99,9 @@ validate = function () {
         message_alert.innerHTML += `<p>${message} ${name_surname.placeholder.toUpperCase()}</p>`;
     }
     if (dni.value == "") {
+        validate = false;
+        message_alert.innerHTML += `<p>${message} ${dni.placeholder.toUpperCase()}</p>`;
+    }else if(!regexDni.test(dni.value)){
         validate = false;
         message_alert.innerHTML += `<p>${message} ${dni.placeholder.toUpperCase()}</p>`;
     }
@@ -158,13 +163,10 @@ validate = function () {
                 numberOfSymptoms += 1
             }
         }
-        if(numberOfSymptoms == 0 && validate()){
+        if(numberOfSymptoms == 0){
             document.getElementById("message_alert").style.backgroundColor= "#035e00";
-
-        } else if (numberOfSymptoms !=0 && validate()){
+        }else{
             document.getElementById("message_alert").style.backgroundColor= "#5e0000";
-        }else if (numberOfSymptoms == 0 && !validate()){
-            document.getElementById("message_alert")
         }
         const messageOk = `<p>El formulario fue completado correctamente. ${numberOfSymptoms} síntomas de COVID-19 fueron registrados</p>`
         document.getElementById("message_alert").innerHTML = messageOk
