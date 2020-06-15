@@ -1,0 +1,12 @@
+.message_alert{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(95, 0, 0, 0.95);
+    width: 100%;
+    color: white;
+}
+
+.message_alert p{
+    padding:.5rem;
+}

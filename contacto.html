@@ -5,9 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/contacto.css" />
+    <link rel="stylesheet" href="css/message_alert.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="js/contacto.js" defer="defer"></script>
 </head>
 
 <body>
@@ -40,17 +42,22 @@
         </nav>
     </header>
 
+    <div class="message_alert" id="message_alert">
+        
+    </div>
+
     <main>
         <section class="contact_us">
             <section class="contact">
                 <h1>CONTACTO</h1>
-                <form action="">
+                <form action="" id="form">
                     <input type="text" name="name" id="name" placeholder="Nombre">
                     <input type="text" name="surname" id="surname" placeholder="Apellido">
-                    <input type="email" name="email" id="email" placeholder="email">
-                    <input type="tel" name="telephone" id="telephone" placeholder="Telefono">
-                    <textarea name="consult" id="consult" cols="30" rows="10" placeholder="Comentario..."></textarea>
-                    <input type="submit" value="Enviar">
+                    <input type="text" name="email" id="email" placeholder="Email">
+                    <input type="text" name="telephone" id="telephone" placeholder="Telefono">
+                    <textarea name="consult" id="consult" cols="30" rows="10" placeholder="Comentario" maxlength="1000"></textarea>
+                    <p id="max_length"><span id="length"></span></p>
+                    <input type="submit" value="Enviar" id="send">
                 </form>
             </section>
             <section class="data_contact">
