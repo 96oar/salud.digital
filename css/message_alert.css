@@ -5,6 +5,7 @@
     background-color: rgba(95, 0, 0, 0.95);
     width: 100%;
     color: white;
+    z-index:10;
 }
 
 .message_alert p{
