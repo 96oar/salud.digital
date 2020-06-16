@@ -8,27 +8,22 @@ setEvent = function () {
     var optionsTravel = document.getElementsByName("travel");
 
     document.getElementById("send").addEventListener("click", () => {
-        formSubmit.onsubmit = () => {
-            
-            if(validate()){
-                sumSymptoms();
-                setTimeout(() => {
-                    return true
-                }, 900);
-                
-            }else{
-                
-                return false
-            }
-            
-            
-            
-           
-            
+        if (validate()) {
+            sumSymptoms();
+            event.preventDefault();
+            setTimeout(() => {
+                formSubmit.submit();
+            }, 2000);
+        } else {
+
+            formSubmit.onsubmit = () => { return false }
         }
     }
+
+
     );
-    
+
+
     optionsAddresCity[0].addEventListener("click", showHideAddresCity)
     optionsAddresCity[1].addEventListener("click", showHideAddresCity)
     optionsTravel[0].addEventListener("click", showHideTravel)
@@ -101,7 +96,7 @@ validate = function () {
     if (dni.value == "") {
         validate = false;
         message_alert.innerHTML += `<p>${message} ${dni.placeholder.toUpperCase()}</p>`;
-    }else if(!regexDni.test(dni.value)){
+    } else if (!regexDni.test(dni.value)) {
         validate = false;
         message_alert.innerHTML += `<p>${message} ${dni.placeholder.toUpperCase()}</p>`;
     }
@@ -146,34 +141,33 @@ validate = function () {
         }
         return select;
     }
-    
+
 
     return validate
 
 }
 
-    function sumSymptoms() {
-        var symptoms = ["fever", "headache","cough","sore_throat","difficulty_breathing"];
-        let numberOfSymptoms = 0
- 
-        for (i in symptoms) {
-           var option = document.getElementsByName(symptoms[i])
-           for(x in option)
-            if (option[x].checked && option[x].value=="si") {
+function sumSymptoms() {
+    var symptoms = ["fever", "headache", "cough", "sore_throat", "difficulty_breathing"];
+    let numberOfSymptoms = 0
+
+    for (i in symptoms) {
+        var option = document.getElementsByName(symptoms[i])
+        for (x in option)
+            if (option[x].checked && option[x].value == "si") {
                 numberOfSymptoms += 1
             }
-        }
-        if(numberOfSymptoms == 0){
-            document.getElementById("message_alert").style.backgroundColor= "#035e00";
-        }else{
-            document.getElementById("message_alert").style.backgroundColor= "#5e0000";
-        }
-        const messageOk = `<p>El formulario fue completado correctamente. ${numberOfSymptoms} síntomas de COVID-19 fueron registrados</p>`
-        document.getElementById("message_alert").innerHTML = messageOk
-        //alert(document.getElementById("message_alert").innerHTML = messageOk);
     }
+    if (numberOfSymptoms == 0) {
+        document.getElementById("message_alert").style.backgroundColor = "#035e00";
+    } else {
+        document.getElementById("message_alert").style.backgroundColor = "#5e0000";
+    }
+    const messageOk = `<p>El formulario fue completado correctamente. ${numberOfSymptoms} síntomas de COVID-19 fueron registrados</p>`
+    document.getElementById("message_alert").innerHTML = messageOk
+    //alert(document.getElementById("message_alert").innerHTML = messageOk);
+}
 
-    
-    
-   
-    
+
+
+
