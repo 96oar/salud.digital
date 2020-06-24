@@ -19,6 +19,7 @@ header {
     height: 5rem;
 }
 
+
 header nav {
     position: fixed;
     top: 0;
@@ -30,7 +31,7 @@ header nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
-    z-index: 20;
+    z-index: 10000;
 }
 
 header nav label.logo {
@@ -137,6 +138,7 @@ header nav #check_search:checked~.container-search {
     }
     header nav .menu {
         position: absolute;
+    
     }
     @media (min-width:47em) {
         body {
