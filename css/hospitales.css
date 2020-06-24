@@ -21,6 +21,11 @@
   text-align: center;
 }
 
+.ajs-dialog{
+  transform: translateY(-50%);
+  top:50%;
+}
+
 @media screen and (min-width: 47em) {
   body {
     font-size: 90%;
@@ -38,7 +43,7 @@
     font-size: 100%;
     background-color: #d6dbd7;
   }
-  main.map {
+  .main.map {
     padding: 0;
     width: 90%;
     display: grid;
@@ -51,7 +56,7 @@
     margin: 0 auto;
     box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  main.map .title {
-    margin: auto;
+  .title_search {
+    margin: 0;
   }
 }
