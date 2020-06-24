@@ -1,35 +1,62 @@
-@import 'header.css';
-@import 'footer.css';
+@import "header.css";
+@import "footer.css";
+
 .main.map {
-    grid-template-rows: 0.3fr 8fr;
-    width: 100%;
+  grid-template-rows: 0.3fr 8fr;
+  width: 100%;
 }
 
-@media screen and (min-width:47em) {
-    body {
-        font-size: 90%;
-    }
+.title_search {
+  padding: 0.5rem;
+  margin: auto;
 }
 
-@media screen and (min-width:80em) {
-    body {
-        font-size: 100%;
-        background-color: #d6dbd7;
-    }
-    main.map {
-        padding: 0;
-        width: 90%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 8fr;
-        gap: 0.0625em 0.0625em;
-        grid-template-areas: "title" "map";
-        grid-area: main;
-        background-color: #ffffff;
-        margin: 0 auto;
-        box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
-    }
-    main.map .title {
-        margin: auto;
-    }
+.title {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.search_hospital {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.ajs-dialog{
+  transform: translateY(-50%);
+  top:50%;
+}
+
+@media screen and (min-width: 47em) {
+  body {
+    font-size: 90%;
+  }
+
+  .title_search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  body {
+    font-size: 100%;
+    background-color: #d6dbd7;
+  }
+  .main.map {
+    padding: 0;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr;
+    gap: 0.0625em 0.0625em;
+    grid-template-areas: "title" "map";
+    grid-area: main;
+    background-color: #ffffff;
+    margin: 0 auto;
+    box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  .title_search {
+    margin: 0;
+  }
 }

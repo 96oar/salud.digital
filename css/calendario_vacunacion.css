@@ -1,0 +1,27 @@
+@import 'header.css';
+@import 'footer.css';
+
+main {
+    margin: .5rem 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width:47em) {
+    body {
+        font-size: 90%;
+    }
+}
+
+@media screen and (min-width:80em) {
+    body {
+        font-size: 100%;
+        background-color: #d6dbd7;
+    }
+    main {
+        padding: 0;
+        width: 90%;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+}
